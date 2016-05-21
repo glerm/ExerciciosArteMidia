@@ -1,0 +1,98 @@
+#N canvas 1 96 1235 663 24;
+#X obj 96 29 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 275 156 gemwin;
+#X text 261 18 cria janela;
+#X msg 291 111 destroy;
+#X text 381 117 fecha janela;
+#X obj 95 69 gemhead;
+#X obj 56 413 translateXYZ;
+#X floatatom 138 376 5 0 0 0 - - -;
+#X obj 127 161 metro 500;
+#X obj 127 139 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 129 275 5 0 0 0 - - -;
+#X floatatom 494 362 5 0 0 0 - - -;
+#X obj 56 572 color;
+#X msg 371 560 1 0 0;
+#X msg 367 596 0 1 0;
+#X msg 367 632 0 0 1;
+#X obj 53 632 square 1;
+#X msg 275 56 reset \, create \, 1;
+#X obj 128 328 - 4;
+#X obj 129 192 counter 8;
+#X text 554 362 eixo y (altura);
+#X text 201 371 eixo x (largura);
+#X floatatom 494 395 5 0 0 0 - - -;
+#X obj 194 239 cnv 15 650 120 empty empty empty 20 12 0 14 -261421
+-66577 0;
+#X text 200 254 considerando -4 unidades da janela a esquerda;
+#X text 158 236 EX:;
+#X msg 197 589 0 0 0;
+#X msg 196 623 1 1 1;
+#X text 438 557 R (red);
+#X text 433 597 G (green);
+#X text 434 632 B (blue);
+#X text 261 586 preto;
+#X text 260 621 branco;
+#X obj 63 445 cnv 15 500 100 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X text 80 470 e o objeto geometrico;
+#X text 280 515 dimensões ou posições;
+#X text 555 395 eixo z (profundidade);
+#X text 82 446 no caminho entre o gemhead (renderização);
+#X text 81 491 são colocados modificadores de texturas;
+#X obj 545 14 cnv 15 500 200 empty empty Dado_o_exemplo_ao_lado: 20
+12 0 30 -204786 -66577 0;
+#X text 200 275 considerando 4 unidades da janela a direita para que
+SAIA;
+#X text 197 314 e diminuindo -4 para ter [-4 \, -3 \, -2 \, -1 \, 0
+\, 1 \, 2 \, 3 \, 4];
+#X text 201 235 Fazendo o quadrado andar com um contador:;
+#X text 745 294 DA TELA;
+#X obj 558 60 cnv 15 450 150 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X obj 845 110 cnv 15 350 120 empty empty empty 20 12 0 14 -230848
+-66577 0;
+#N canvas 714 399 449 301 formas 0;
+#X obj 105 64 rectangle;
+#X obj 104 6 circle;
+#X obj 106 124 cube;
+#X obj 104 180 sphere;
+#X text 97 233 etc.;
+#X obj 167 124 cone;
+#X obj 217 63 triangle;
+#X restore 567 141 pd formas;
+#X text 567 61 Experimente trocar o quadrado;
+#X text 564 171 Copie e cole.;
+#X text 564 79 por outras formas.;
+#X obj 863 156 pix_image;
+#X obj 861 188 pix_texture;
+#X text 858 107 Experimente trocar o objeto;
+#X text 858 127 color por texturas de imagens;
+#X text 562 109 Clique abaixo:;
+#X obj 514 60 cnv 15 1 50 empty empty 1 20 12 0 60 -262144 -66577 0
+;
+#X obj 793 118 cnv 15 50 50 empty empty 2 0 12 0 60 -232576 -66577
+0;
+#X text 976 153 .jpg ou .png;
+#X connect 0 0 5 0;
+#X connect 3 0 1 0;
+#X connect 5 0 6 0;
+#X connect 6 0 12 0;
+#X connect 7 0 6 1;
+#X connect 8 0 19 0;
+#X connect 9 0 8 0;
+#X connect 10 0 18 0;
+#X connect 11 0 6 2;
+#X connect 12 0 16 0;
+#X connect 13 0 12 1;
+#X connect 14 0 12 1;
+#X connect 15 0 12 1;
+#X connect 17 0 1 0;
+#X connect 18 0 7 0;
+#X connect 19 0 10 0;
+#X connect 22 0 6 3;
+#X connect 26 0 12 1;
+#X connect 27 0 12 1;
+#X connect 50 0 51 0;

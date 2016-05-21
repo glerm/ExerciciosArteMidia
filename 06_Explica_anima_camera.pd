@@ -1,0 +1,81 @@
+#N canvas 178 77 1187 671 24;
+#X obj 11 70 pix_video;
+#X obj 11 6 gemhead;
+#X obj 327 76 gemwin;
+#X msg 385 5 create \, 1;
+#X msg 382 35 0 \, destroy;
+#X obj 13 572 pix_texture;
+#X floatatom 159 625 5 0 0 0 - - -;
+#X obj 170 329 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 124 189 key;
+#X floatatom 130 223 5 0 0 0 - - -;
+#X text 255 289 letra B (98);
+#X obj 494 372 gemhead -1;
+#X obj 494 484 pix_texture;
+#X obj 13 650 square 4;
+#X obj 170 293 sel 66;
+#X obj 91 439 pix_buffer_write anima;
+#X obj 491 418 pix_buffer_read anima;
+#X obj 94 477 pix_buffer anima 5;
+#X obj 170 355 counter 4;
+#X floatatom 170 414 5 0 0 0 - - -;
+#X obj 562 305 counter 4;
+#X obj 564 265 metro 500;
+#X floatatom 629 343 5 0 0 0 - - -;
+#X obj 563 218 tgl 40 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 493 552 translateXYZ -2.5 2.5 0;
+#X obj 491 592 square 2;
+#X obj 669 201 hsl 128 15 100 1000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X floatatom 667 229 5 100 1000 0 - - -;
+#X obj 119 60 cnv 15 200 50 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 118 67 imagem de camera;
+#X obj 405 66 cnv 15 200 50 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 404 73 estrutura da janela;
+#X obj 673 284 cnv 15 250 50 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X text 679 291 interação com quadros;
+#X obj 626 462 cnv 15 200 70 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X text 628 460 "anima" os frames;
+#X text 635 482 selecionando com;
+#X text 700 505 o contador;
+#X obj 192 174 cnv 15 300 100 empty empty empty 20 12 0 14 -159325
+-66577 0;
+#X text 211 174 salva frames (quadros);
+#X text 212 197 da imagem principal;
+#X text 212 222 baseando-se na;
+#X text 210 247 interação com o teclado;
+#X obj 117 35 cnv 15 1 50 empty empty 1 20 12 0 60 -262144 -66577 0
+;
+#X obj 187 137 cnv 15 1 50 empty empty 2 20 12 0 60 -262144 -66577
+0;
+#X obj 547 180 cnv 15 1 50 empty empty 3 20 12 0 60 -262144 -66577
+0;
+#X connect 0 0 5 0;
+#X connect 0 0 15 0;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 13 0;
+#X connect 6 0 13 1;
+#X connect 7 0 18 0;
+#X connect 8 0 9 0;
+#X connect 8 0 14 0;
+#X connect 11 0 16 0;
+#X connect 12 0 24 0;
+#X connect 14 0 7 0;
+#X connect 16 0 12 0;
+#X connect 18 0 19 0;
+#X connect 19 0 15 1;
+#X connect 20 0 22 0;
+#X connect 21 0 20 0;
+#X connect 22 0 16 1;
+#X connect 23 0 21 0;
+#X connect 24 0 25 0;
+#X connect 26 0 27 0;
+#X connect 27 0 21 1;

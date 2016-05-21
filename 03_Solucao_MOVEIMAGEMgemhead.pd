@@ -1,0 +1,47 @@
+#N canvas 327 77 1036 656 36;
+#X obj 19 26 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 389 135 gemwin;
+#X msg 276 9 create \, 1;
+#X text 495 2 cria janela;
+#X msg 386 62 destroy;
+#X text 547 59 fecha janela;
+#X obj 18 66 gemhead;
+#X obj 21 596 square 1;
+#X obj 22 405 translateXYZ;
+#X floatatom 46 331 5 0 0 0 - - -;
+#X obj 44 149 metro 500;
+#X obj 49 122 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 121 471 pix_image;
+#X obj 123 531 pix_texture;
+#X floatatom 235 588 5 0 0 0 - - -;
+#X obj 348 213 cnv 15 500 300 empty empty empty 20 12 0 14 -257985
+-66577 0;
+#X obj 360 305 openpanel;
+#X obj 362 282 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 360 363 open \$1;
+#X text 355 221 abre navegador;
+#X text 385 253 de arquivos;
+#X text 521 365 envia o;
+#X text 520 404 caminho até;
+#X text 527 442 diretorio;
+#X obj 44 218 counter 8;
+#X obj 46 274 - 4;
+#X connect 0 0 6 0;
+#X connect 2 0 1 0;
+#X connect 4 0 1 0;
+#X connect 6 0 8 0;
+#X connect 8 0 12 0;
+#X connect 9 0 8 1;
+#X connect 10 0 24 0;
+#X connect 11 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 7 0;
+#X connect 14 0 7 1;
+#X connect 16 0 18 0;
+#X connect 17 0 16 0;
+#X connect 18 0 12 0;
+#X connect 24 0 25 0;
+#X connect 25 0 9 0;

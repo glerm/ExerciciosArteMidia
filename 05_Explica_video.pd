@@ -1,0 +1,101 @@
+#N canvas 2 77 1351 687 24;
+#X obj -20 0 gemhead;
+#X obj -37 463 pix_texture;
+#X obj 341 476 unpack 0 0 0;
+#X floatatom 301 560 5 0 0 3 total_de_frames_(quadros) - total_de_quadros
+;
+#X floatatom 506 536 5 0 0 3 width(largura) - -;
+#X floatatom 570 502 5 0 0 3 height(altura) - -;
+#X obj 151 410 bng 15 250 50 0 empty empty fim_do_arquivo 20 7 0 10
+-262144 -1 -1;
+#X floatatom 124 341 5 0 10000 1 frame(quadro) - -;
+#X obj -37 581 rectangle 4 3;
+#X obj 36 384 pix_film;
+#X msg 536 65 reset \, dimen 640 480 \, create \, 1;
+#X obj 654 227 gemwin;
+#X msg 709 114 reset \, fullscreen 1 \, create \, 1;
+#X msg 519 34 reset \, dimen 320 240 \, create \, 1;
+#X obj 156 246 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 149 269 metro 10;
+#X obj 531 -31 cnv 15 500 60 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X obj 721 145 cnv 15 530 60 empty empty empty 20 12 0 14 -135119 -66577
+0;
+#X msg 1165 202 0 \, destroy;
+#N canvas 901 410 464 316 esc 1;
+#X obj 5 21 gemkeyboard;
+#X obj 84 256 outlet;
+#X obj 223 193 keyname;
+#X obj 294 230 sel Escape;
+#X obj 12 101 sel 53;
+#X obj 84 103 sel Escape;
+#X obj 77 -9 gemkeyname;
+#X obj 135 35 cnv 15 200 60 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X text 135 36 captura de tecla ESC;
+#X text 134 60 no contexto GEM;
+#X obj 218 131 cnv 15 200 60 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X text 214 123 captura de tecla ESC;
+#X text 217 145 no contexto do patch;
+#X connect 0 0 4 0;
+#X connect 2 1 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 6 1 5 0;
+#X restore 1165 172 pd esc;
+#X text 721 172 deixar um atalho de teclado retornar >;
+#X obj 51 41 cnv 15 400 60 empty empty empty 20 12 0 14 -68928 -66577
+0;
+#X text 54 42 > formatação de caminho para diretório;
+#X text 96 66 > objeto;
+#X obj 190 16 bng 25 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 190 67 openpanel;
+#X obj -22 -33 cnv 15 400 30 empty empty empty 20 12 0 14 -259657 -66577
+0;
+#X text -15 -31 > renderização grafica de grafo GEM;
+#X obj 128 131 cnv 15 100 30 empty empty empty 20 12 0 14 -68928 -66577
+0;
+#X msg 139 133 open \$1;
+#X text 525 -30 > argumentos de criação: reinicia a renderização
+;
+#X text 548 -6 determina dimensões da tela;
+#X obj 343 413 cnv 15 500 60 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X text 351 415 > estrutura de dados com total de frames;
+#X obj -30 494 cnv 15 300 60 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text -28 494 > aplicação dos pixels do filme;
+#X text -28 519 em textura de um retângulo;
+#X text 356 440 dimensões do quadro largura e altura;
+#X obj 191 206 cnv 15 300 60 empty empty empty 20 12 0 14 -4032 -66577
+0;
+#X text 196 211 > correndo os frames com;
+#X text 218 232 contador;
+#X obj 334 273 r total_de_quadros;
+#X obj 149 299 counter;
+#X text 725 145 > liga tela cheia: IMPORTANTE ao usar tela cheia;
+#X connect 0 0 9 0;
+#X connect 1 0 8 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 2 2 5 0;
+#X connect 7 0 9 1;
+#X connect 9 0 1 0;
+#X connect 9 1 2 0;
+#X connect 9 2 6 0;
+#X connect 10 0 11 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 0;
+#X connect 14 0 15 0;
+#X connect 15 0 42 0;
+#X connect 18 0 11 0;
+#X connect 19 0 18 0;
+#X connect 24 0 25 0;
+#X connect 25 0 29 0;
+#X connect 29 0 9 0;
+#X connect 41 0 42 4;
+#X connect 42 0 7 0;
