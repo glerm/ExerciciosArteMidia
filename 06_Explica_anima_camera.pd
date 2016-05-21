@@ -1,11 +1,11 @@
-#N canvas 178 77 1187 671 24;
-#X obj 11 70 pix_video;
-#X obj 11 6 gemhead;
-#X obj 327 76 gemwin;
-#X msg 385 5 create \, 1;
-#X msg 382 35 0 \, destroy;
-#X obj 13 572 pix_texture;
-#X floatatom 159 625 5 0 0 0 - - -;
+#N canvas 176 77 1187 671 24;
+#X obj 12 70 pix_video;
+#X obj 21 25 gemhead;
+#X obj 323 95 gemwin;
+#X msg 381 24 create \, 1;
+#X msg 378 54 0 \, destroy;
+#X obj 92 525 pix_texture;
+#X floatatom 238 578 5 0 0 0 - - -;
 #X obj 170 329 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 124 189 key;
@@ -13,7 +13,7 @@
 #X text 255 289 letra B (98);
 #X obj 494 372 gemhead -1;
 #X obj 494 484 pix_texture;
-#X obj 13 650 square 4;
+#X obj 92 603 square 4;
 #X obj 170 293 sel 66;
 #X obj 91 439 pix_buffer_write anima;
 #X obj 491 418 pix_buffer_read anima;
@@ -33,9 +33,9 @@
 #X obj 119 60 cnv 15 200 50 empty empty empty 20 12 0 14 -261234 -66577
 0;
 #X text 118 67 imagem de camera;
-#X obj 405 66 cnv 15 200 50 empty empty empty 20 12 0 14 -261234 -66577
+#X obj 401 85 cnv 15 200 50 empty empty empty 20 12 0 14 -261234 -66577
 0;
-#X text 404 73 estrutura da janela;
+#X text 400 92 estrutura da janela;
 #X obj 673 284 cnv 15 250 50 empty empty empty 20 12 0 14 -257985 -66577
 0;
 #X text 679 291 interação com quadros;

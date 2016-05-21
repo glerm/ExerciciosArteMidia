@@ -1,4 +1,4 @@
-#N canvas 331 98 980 603 24;
+#N canvas 28 106 1266 629 24;
 #X msg 41 27 create \, 1;
 #X text 151 24 cria janela;
 #X msg 82 70 destroy;
@@ -8,11 +8,11 @@
 #X floatatom 555 130 5 0 255 0 - - -;
 #X floatatom 557 188 5 0 255 0 - - -;
 #X obj 560 57 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--1 -1 8000 1;
+-1 -1 0 1;
 #X obj 558 112 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 6100 1;
+-1 -1 0 1;
 #X obj 559 171 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4160
--1 -1 8300 1;
+-1 -1 0 1;
 #X obj 428 281 pack f f f;
 #X obj 410 360 prepend set;
 #X msg 410 390 0.629921 0.480315 0.653543;
@@ -44,7 +44,7 @@
 #X text 691 105 verde(G);
 #X text 693 163 azul (B);
 #X text 91 134 como parâmetro do objeto gemwin;
-#X obj 497 237 cnv 15 720 40 empty empty <_MANDANDO_UM_BANG_NO_INLET_DA_ESQUERDA
+#X obj 476 237 cnv 15 720 40 empty empty <_MANDANDO_UM_BANG_NO_INLET_DA_ESQUERDA
 20 20 0 30 -261234 -66577 0;
 #X obj 474 242 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113
 -261682 -1;
