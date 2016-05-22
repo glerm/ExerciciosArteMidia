@@ -1,29 +1,28 @@
-#N canvas 2 77 1351 687 24;
-#X obj -20 0 gemhead;
-#X obj -37 463 pix_texture;
-#X obj 341 476 unpack 0 0 0;
-#X floatatom 301 560 5 0 0 3 total_de_frames_(quadros) - total_de_quadros
-;
-#X floatatom 506 536 5 0 0 3 width(largura) - -;
-#X floatatom 570 502 5 0 0 3 height(altura) - -;
-#X obj 151 410 bng 15 250 50 0 empty empty fim_do_arquivo 20 7 0 10
+#N canvas 1 77 1351 687 24;
+#X obj -7 7 gemhead;
+#X obj -24 470 pix_texture;
+#X obj 354 483 unpack 0 0 0;
+#X floatatom 320 568 5 0 0 3 total_de_quadros - -;
+#X floatatom 519 543 5 0 0 3 width(largura) - -;
+#X floatatom 583 509 5 0 0 3 height(altura) - -;
+#X obj 164 417 bng 15 250 50 0 empty empty fim_do_arquivo 20 7 0 10
 -262144 -1 -1;
-#X floatatom 124 341 5 0 10000 1 frame(quadro) - -;
-#X obj -37 581 rectangle 4 3;
-#X obj 36 384 pix_film;
-#X msg 536 65 reset \, dimen 640 480 \, create \, 1;
-#X obj 654 227 gemwin;
-#X msg 709 114 reset \, fullscreen 1 \, create \, 1;
-#X msg 519 34 reset \, dimen 320 240 \, create \, 1;
-#X obj 156 246 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X floatatom 137 348 5 0 10000 1 frame(quadro) - -;
+#X obj -24 588 rectangle 4 3;
+#X obj 49 391 pix_film;
+#X msg 549 72 reset \, dimen 640 480 \, create \, 1;
+#X obj 667 234 gemwin;
+#X msg 722 121 reset \, fullscreen 1 \, create \, 1;
+#X msg 532 41 reset \, dimen 320 240 \, create \, 1;
+#X obj 169 253 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 149 269 metro 10;
-#X obj 531 -31 cnv 15 500 60 empty empty empty 20 12 0 14 -257985 -66577
+#X obj 162 276 metro 10;
+#X obj 544 -24 cnv 15 500 60 empty empty empty 20 12 0 14 -257985 -66577
 0;
-#X obj 721 145 cnv 15 530 60 empty empty empty 20 12 0 14 -135119 -66577
+#X obj 734 152 cnv 15 530 60 empty empty empty 20 12 0 14 -135119 -66577
 0;
-#X msg 1165 202 0 \, destroy;
-#N canvas 901 410 464 316 esc 1;
+#X msg 1178 209 0 \, destroy;
+#N canvas 869 408 464 316 esc 1;
 #X obj 5 21 gemkeyboard;
 #X obj 84 256 outlet;
 #X obj 223 193 keyname;
@@ -45,44 +44,46 @@
 #X connect 4 0 1 0;
 #X connect 5 0 1 0;
 #X connect 6 1 5 0;
-#X restore 1165 172 pd esc;
-#X text 721 172 deixar um atalho de teclado retornar >;
-#X obj 51 41 cnv 15 400 60 empty empty empty 20 12 0 14 -68928 -66577
+#X restore 1178 179 pd esc;
+#X text 734 179 deixar um atalho de teclado retornar >;
+#X obj 64 48 cnv 15 400 60 empty empty empty 20 12 0 14 -68928 -66577
 0;
-#X text 54 42 > formatação de caminho para diretório;
-#X text 96 66 > objeto;
-#X obj 190 16 bng 25 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+#X text 67 49 > formatação de caminho para diretório;
+#X text 109 73 > objeto;
+#X obj 203 23 bng 25 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X obj 190 67 openpanel;
-#X obj -22 -33 cnv 15 400 30 empty empty empty 20 12 0 14 -259657 -66577
+#X obj 203 74 openpanel;
+#X obj -9 -26 cnv 15 400 30 empty empty empty 20 12 0 14 -259657 -66577
 0;
-#X text -15 -31 > renderização grafica de grafo GEM;
-#X obj 128 131 cnv 15 100 30 empty empty empty 20 12 0 14 -68928 -66577
+#X text -2 -24 > renderização grafica de grafo GEM;
+#X obj 141 138 cnv 15 100 30 empty empty empty 20 12 0 14 -68928 -66577
 0;
-#X msg 139 133 open \$1;
-#X text 525 -30 > argumentos de criação: reinicia a renderização
+#X msg 152 140 open \$1;
+#X text 538 -23 > argumentos de criação: reinicia a renderização
 ;
-#X text 548 -6 determina dimensões da tela;
-#X obj 343 413 cnv 15 500 60 empty empty empty 20 12 0 14 -257985 -66577
+#X text 561 1 determina dimensões da tela;
+#X obj 356 420 cnv 15 500 60 empty empty empty 20 12 0 14 -257985 -66577
 0;
-#X text 351 415 > estrutura de dados com total de frames;
-#X obj -30 494 cnv 15 300 60 empty empty empty 20 12 0 14 -232576 -66577
+#X text 364 422 > estrutura de dados com total de frames;
+#X obj -17 501 cnv 15 300 60 empty empty empty 20 12 0 14 -232576 -66577
 0;
-#X text -28 494 > aplicação dos pixels do filme;
-#X text -28 519 em textura de um retângulo;
-#X text 356 440 dimensões do quadro largura e altura;
-#X obj 191 206 cnv 15 300 60 empty empty empty 20 12 0 14 -4032 -66577
+#X text -15 501 > aplicação dos pixels do filme;
+#X text -15 526 em textura de um retângulo;
+#X text 369 447 dimensões do quadro largura e altura;
+#X obj 204 213 cnv 15 300 60 empty empty empty 20 12 0 14 -4032 -66577
 0;
-#X text 196 211 > correndo os frames com;
-#X text 218 232 contador;
-#X obj 334 273 r total_de_quadros;
-#X obj 149 299 counter;
-#X text 725 145 > liga tela cheia: IMPORTANTE ao usar tela cheia;
+#X text 209 218 > correndo os frames com;
+#X text 231 239 contador;
+#X obj 343 280 r total_de_quadros;
+#X obj 162 306 counter;
+#X text 738 152 > liga tela cheia: IMPORTANTE ao usar tela cheia;
+#X obj 295 621 s total_de_quadros;
 #X connect 0 0 9 0;
 #X connect 1 0 8 0;
 #X connect 2 0 3 0;
 #X connect 2 1 4 0;
 #X connect 2 2 5 0;
+#X connect 3 0 44 0;
 #X connect 7 0 9 1;
 #X connect 9 0 1 0;
 #X connect 9 1 2 0;
